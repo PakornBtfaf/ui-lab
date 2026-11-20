@@ -10,7 +10,7 @@
       "id": "5a3fcc25-c6a6-4efc-98d8-4e42778b0078",
       "comment": "",
       "command": "open",
-      "target": "/selenium/web/web-form.html",
+      "target": "https://www.selenium.dev/selenium/web/web-form.html",
       "targets": [],
       "value": ""
     }, {
@@ -117,7 +117,7 @@
       "id": "a2ab0a23-e0da-42c1-81c4-351502c00767",
       "comment": "",
       "command": "click",
-      "target": "css=.btn",
+      "target": "xpath=//button[@type='submit']",
       "targets": [
         ["css=.btn", "css:finder"],
         ["xpath=//button[@type='submit']", "xpath:attributes"],
@@ -125,6 +125,27 @@
         ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "3e8c658b-bead-4ad9-8a28-5d35aaf66cb7",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=message",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "35c8ed13-fa4a-4869-a05e-6add61983913",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Web form - target page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d51bd6b-fe40-4d10-9730-7b4333217034",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=message",
+      "targets": [],
+      "value": "Received!"
     }]
   }],
   "suites": [{
