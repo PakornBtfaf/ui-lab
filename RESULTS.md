@@ -4,11 +4,11 @@ Tool parts that I chose: Part 1 (Selenium IDE) and Part 3 (Robot Framework)
 
 ## Part 0
 - Step 0.1, Chrome version: 157.0.8103.80
-- Step 0.3, ChromeDriver version:
-- Step 0.4, locator of Pizza, Please!:
-- Step 0.4, locator of Excluded tools:
-- Step 0.4, locator of Must be vegetarian:
-- Step 0.4, locator of Custom Pizza Name:
+- Step 0.3, ChromeDriver version: ChromeDriver 157.0.8103.80 (5cb0fce6746acfc926045c45b23d811d479c49b9-refs/branch-heads/8103@{#1575})
+- Step 0.4, locator of Pizza, Please!: button[name='pizza-please']
+- Step 0.4, locator of Excluded tools: //label[normalize-space()='Excluded tools']/following-sibling::select
+- Step 0.4, locator of Must be vegetarian: #default-checkbox
+- Step 0.4, locator of Custom Pizza Name: input#pizza-name
 - Step 0.5, pizza name, tool and calories of the run by hand:
 
 | Step | Actual result | Pass or fail |
