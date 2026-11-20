@@ -28,7 +28,7 @@ Tool parts that I chose: Part 1 (Selenium IDE) and Part 3 (Robot Framework)
 - Step 1.6, commands changed, added or deleted after recording: I recorded QP-01 once, then replaced the recorded commands with the 29 commands of the lab table (loaded into ui-lab.side by a small helper script, add-qp01.js). Added: wait for element visible/present before each interaction, execute script to build a unique pizza name stored in pizzaName, assert text/value/selected label/checked/not text to check each step, store text plus execute script to check that calories are 600 or less. Changed: the pizza name typed during recording is now ${pizzaName}, and the open target is now the full QuickPizza address. Deleted: the extra recorded clicks, such as the click on the name field.
 - Step 1.6, the pizza names of run 1 and run 2, from the lines info: echo: Lab Pizza 20261120-220636 and Lab Pizza 20261120-221232
 - Step 1.6, the line Tests: of both runs: Tests: 2 passed, 2 total (run 1) and Tests: 2 passed, 2 total (run 2)
-- Step 1.7, one line of QP01customerTest.java that needs rewriting, and why:
+- Step 1.7, one line of QP01customerTest.java that needs rewriting, and why: one line of QP01customerTest.java that needs rewriting, and why: driver.findElement(By.xpath("//label[normalize-space()='Max Calories per Slice']/../input")).sendKeys("600"); needs rewriting because sendKeys only appends to the box and does not clear it first, so the box that already holds 1000 would end with 1000600. It must call clear() on the element before sendKeys("600"), as the IDE command type does.
 
 ## Part 3: Robot Framework
 - robot --version:
