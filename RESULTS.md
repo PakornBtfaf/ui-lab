@@ -22,12 +22,12 @@ Tool parts that I chose: Part 1 (Selenium IDE) and Part 3 (Robot Framework)
 | 7 | List shows Lab Pizza 20261120-1714 (tool=Scissors, ingredients_number=8) | Pass |
 
 ## Part 1: Selenium IDE
-- Firefox version and Node.js version:
-- Step 1.4, the line of the failed check and the line Tests:
-- Step 1.5, target chosen for Submit, and why the recorded one was fragile:
-- Step 1.6, commands changed, added or deleted after recording:
-- Step 1.6, the pizza names of run 1 and run 2, from the lines info: echo:
-- Step 1.6, the line Tests: of both runs:
+- Firefox version and Node.js version:Firefox 160.0.1 (64-bit), Node.js v24.14.0 (npm 11.9.0)
+- Step 1.4, the line of the failed check and the line Tests:Actual value 'Received!' did not match 'Received' during assertText:id=message:Received ; Tests: 1 failed, 1 total
+- Step 1.5, target chosen for Submit, and why the recorded one was fragile:target chosen for Submit, and why the recorded one was fragile: xpath=//button[@type='submit']; the recorded css=.btn uses a class name that only describes appearance and can be shared by other buttons, so it clicks the first element with that class and would click the wrong button if a new one appeared above Submit.
+- Step 1.6, commands changed, added or deleted after recording: I recorded QP-01 once, then replaced the recorded commands with the 29 commands of the lab table (loaded into ui-lab.side by a small helper script, add-qp01.js). Added: wait for element visible/present before each interaction, execute script to build a unique pizza name stored in pizzaName, assert text/value/selected label/checked/not text to check each step, store text plus execute script to check that calories are 600 or less. Changed: the pizza name typed during recording is now ${pizzaName}, and the open target is now the full QuickPizza address. Deleted: the extra recorded clicks, such as the click on the name field.
+- Step 1.6, the pizza names of run 1 and run 2, from the lines info: echo: Lab Pizza 20261120-220636 and Lab Pizza 20261120-221232
+- Step 1.6, the line Tests: of both runs: Tests: 2 passed, 2 total (run 1) and Tests: 2 passed, 2 total (run 2)
 - Step 1.7, one line of QP01customerTest.java that needs rewriting, and why:
 
 ## Part 3: Robot Framework
