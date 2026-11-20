@@ -9,17 +9,17 @@ Tool parts that I chose: Part 1 (Selenium IDE) and Part 3 (Robot Framework)
 - Step 0.4, locator of Excluded tools: //label[normalize-space()='Excluded tools']/following-sibling::select
 - Step 0.4, locator of Must be vegetarian: #default-checkbox
 - Step 0.4, locator of Custom Pizza Name: input#pizza-name
-- Step 0.5, pizza name, tool and calories of the run by hand:
+- Step 0.5, pizza name, tool and calories of the run by hand:Lab Pizza 20261120-1530, Scissors, 480
 
 | Step | Actual result | Pass or fail |
 |------|---------------|--------------|
-| 1    |               |              |
-| 2    |               |              |
-| 3    |               |              |
-| 4    |               |              |
-| 5    |               |              |
-| 6    |               |              |
-| 7    |               |              |
+| 1 | Heading "Looking to break out of your pizza routine?" is shown | Pass |
+| 2 | Max Calories per Slice, Excluded tools, Must be vegetarian and Custom Pizza Name appear | Pass |
+| 3 | Fields show 600, Knife, vegetarian ticked, Lab Pizza 20261120-1714 | Pass |
+| 4 | Name: Lab Pizza 20261120-1714, Tool: Scissors, Calories per slice: 600 | Pass |
+| 5 | Page says "Please log in first." | Pass |
+| 6 | Page shows "Latest pizza recommendations" after sign in with admin/admin | Pass |
+| 7 | List shows Lab Pizza 20261120-1714 (tool=Scissors, ingredients_number=8) | Pass |
 
 ## Part 1: Selenium IDE
 - Firefox version and Node.js version:
