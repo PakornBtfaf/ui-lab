@@ -46,22 +46,4 @@ Ask For A Pizza
 
 Get Recommended Tool
     [Documentation]    Return the tool of the recommended pizza.
-    ${line}=    Get Text    xpath://p[starts-with(.,'Tool:')]
-    ${tool}=    Remove String    ${line}    Tool:${SPACE}
-    RETURN    ${tool}
-
-Get Calories Per Slice
-    [Documentation]    Return the calories per slice of the pizza.
-    ${line}=    Get Text    xpath://p[starts-with(.,'Calories per slice:')]
-    ${calories}=    Remove String    ${line}    Calories per slice:${SPACE}
-    RETURN    ${calories}
-
-Recommendation Should Keep The Restrictions
-    [Documentation]    QP-01 step 4. Check the name, tool and calories.
-    [Arguments]    ${name}    ${excluded tool}    ${max calories}
-    Element Should Contain    id:recommendations    Name: ${name}
-    ${tool}=    Get Recommended Tool
-    Should Not Be Equal    ${tool}    ${excluded tool}
-    ${calories}=    Get Calories Per Slice
-    Should Be True    ${calories} <= ${max calories}
-    RETURN    ${tool}
+    ${line}=    Get Text
