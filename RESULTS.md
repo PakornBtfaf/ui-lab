@@ -31,8 +31,8 @@ Tool parts that I chose: Part 1 (Selenium IDE) and Part 3 (Robot Framework)
 - Step 1.7, one line of QP01customerTest.java that needs rewriting, and why: line 100, assertThat(driver.findElement(By.xpath("//p[starts-with(., 'Name:')]")).getText(), is("Name: vars.get(...)...")); needs rewriting because vars.get(...) sits inside the quotation marks, so it is plain text and not the value of the variable. The check compares the page with the text of the variable name instead of the pizza name, and fails every time. It must be written as is("Name: " + vars.get("pizzaName").toString()).
 
 ## Part 3: Robot Framework
-- robot --version:
-- Step 3.2, failure message for the wrong title:
+- robot --version: Robot Framework 7.5.1 (Python 3.11.6 on win32)
+- Step 3.2, failure message for the wrong title: Title should have been 'Web Form' but was 'Web form'.
 - Step 3.8, run 1, result, elapsed time and pizza name:
 - Step 3.8, run 2, result, elapsed time and pizza name:
 
